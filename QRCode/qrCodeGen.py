@@ -2,7 +2,7 @@ import pyqrcode
 from PIL import Image
 
 url = pyqrcode.QRCode('https://www.facebook.com/Annasurbangarden/', error = 'H')
-url.png('test.png',scale=10)
+url.png('test.png',scale=8)
 im = Image.open('test.png')
 im = im.convert("RGBA")
 logo = Image.open('logo.png')
@@ -12,3 +12,4 @@ region = logo
 region = region.resize((box[3] - box[1], box[3] - box[1]))
 im.paste(region,box)
 im.show()
+im = im.save('final.png')
