@@ -6,7 +6,7 @@ url.png('test.png',scale=8)
 im = Image.open('test.png')
 im = im.convert("RGBA")
 logo = Image.open('logo.png')
-box = (135,135,235,235)
+box = (140,140,230,230)
 im.crop(box)
 region = logo
 region = region.resize((box[3] - box[1], box[3] - box[1]))
